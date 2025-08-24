@@ -27,7 +27,7 @@ public class RecruiterController {
         String email = jwtUtil.extractEmail(token);
 
         Recruiter recruiter = recruiterService.getRecruiterByEmail(email);
-        return ResponseEntity.ok(recruiter); // ✅ works now
+        return ResponseEntity.ok(recruiter); //
     }
 
 

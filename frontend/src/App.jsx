@@ -1,16 +1,22 @@
-import { Routes, Route } from "react-router-dom";
+import { Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
+import StudentDashboard from "./pages/StudentDashboard";
+import RecruiterDashboard from "./pages/RecruiterDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+import LandingPage from "./pages/LandingPage";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/recruiter-dashboard" element={<RecruiterDashboard />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
       </Routes>
-    </div>
   );
 }
+
+export default App;
