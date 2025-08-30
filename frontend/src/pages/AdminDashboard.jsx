@@ -1,36 +1,26 @@
-import { Link } from "react-router-dom";
+import DashboardLayout from "../components/DashboardLayout";
 
 const AdminDashboard = () => {
   return (
-    <div className="min-h-screen bg-[#f9f7fd] text-[#4B2E83] px-6 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">⚙️ Admin Dashboard</h1>
+    <DashboardLayout role="admin">
+      <h2 className="text-2xl font-bold mb-4">Admin Dashboard</h2>
+      <p className="mb-6">Manage platform users, recruiters, and job postings.</p>
 
       <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-md">
-          <h2 className="text-xl font-semibold mb-2">User Management</h2>
-          <p className="text-sm">View and manage students & recruiters.</p>
-          <Link to="/manage-users" className="text-purple-700 hover:underline mt-2 block">
-            Manage Users →
-          </Link>
+        <div className="bg-white p-6 shadow rounded-lg">
+          <h3 className="font-semibold">Total Users</h3>
+          <p className="text-3xl font-bold text-[#4B2E83]">1,200</p>
         </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-md">
-          <h2 className="text-xl font-semibold mb-2">Job Post Monitoring</h2>
-          <p className="text-sm">Review all job postings for compliance.</p>
-          <Link to="/monitor-jobs" className="text-purple-700 hover:underline mt-2 block">
-            Monitor Jobs →
-          </Link>
+        <div className="bg-white p-6 shadow rounded-lg">
+          <h3 className="font-semibold">Total Jobs</h3>
+          <p className="text-3xl font-bold text-[#4B2E83]">320</p>
         </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-md">
-          <h2 className="text-xl font-semibold mb-2">Analytics</h2>
-          <p className="text-sm">View platform usage insights and reports.</p>
-          <Link to="/analytics" className="text-purple-700 hover:underline mt-2 block">
-            View Analytics →
-          </Link>
+        <div className="bg-white p-6 shadow rounded-lg">
+          <h3 className="font-semibold">Active Companies</h3>
+          <p className="text-3xl font-bold text-[#4B2E83]">90</p>
         </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 
